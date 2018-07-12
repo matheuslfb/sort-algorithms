@@ -33,18 +33,18 @@ public class BubbleSort
 
         Random n = new Random();
 
-        int arr[] =  new int[100000];
+        int arr[] =  new int[1000];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = n.nextInt(1000);
         }
 
         System.out.println(" array");
-        //ob.printArray(arr);
+        ob.printArray(arr);
 
         ob.bubbleSort(arr);
 
         System.out.println("Sorted array");
-        //ob.printArray(arr);
+        ob.printArray(arr);
         int end  =  (int) System.currentTimeMillis();
 
         int atual = end - start;

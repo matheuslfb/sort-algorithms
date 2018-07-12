@@ -32,7 +32,8 @@ class MergeSort
         int k = l;
         while (i < n1 && j < n2)
         {
-            if (L[i] >= R[j])
+            if (L[i] <= R[j]) // < == ascendente
+                                //  > == descendente
             {
                 arr[k] = L[i];
                 i++;
@@ -85,7 +86,7 @@ class MergeSort
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
-            System.out.print("[ "+ arr[i] + " ]");
+            System.out.print(arr[i] + " ");
         System.out.println();
     }
 
@@ -94,12 +95,19 @@ class MergeSort
     {
         int start = (int) System.currentTimeMillis();
         Random n = new Random();
-        int arr[] =  new int[199999999];
+        int arr[] =  new int[200];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = n.nextInt(1000);
         }
 
-        calcula(arr, 10);
+        System.out.println("Given Array");
+        printArray(arr);
+
+        MergeSort ob = new MergeSort();
+        ob.sort(arr, 0, arr.length-1);
+
+        System.out.println("\nSorted array by descending");
+        printArray(arr);        
 
         int end  =  (int) System.currentTimeMillis();
 
@@ -111,18 +119,13 @@ class MergeSort
 
         int total = 0;
         int j=1;
-        System.out.println("Given Array");
-        printArray(arr);
+        
 
-        MergeSort ob = new MergeSort();
-        //ob.sort(arr, 0, arr.length-1);
-
-        for (int i = 0; i < arr.length ; i++) {
+        //for (int i = 0; i < arr.length ; i++) {
             
-        }
+        //}
 
-        System.out.println("\nSorted array by descending");
-        printArray(arr);
+        
 
         return total;
     }
