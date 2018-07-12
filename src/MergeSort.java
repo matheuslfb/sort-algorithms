@@ -1,5 +1,3 @@
-package com.company;
-
 import java.util.Random;
 
 /* Java program for Merge Sort */
@@ -87,7 +85,7 @@ class MergeSort
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
-            System.out.print(arr[i] + " ");
+            System.out.print("[ "+ arr[i] + " ]");
         System.out.println();
     }
 
@@ -110,10 +108,11 @@ class MergeSort
     }
 
     static int calcula(int arr[], int quantidade){
+
         int total = 0;
         int j=1;
         System.out.println("Given Array");
-        //printArray(arr);
+        printArray(arr);
 
         MergeSort ob = new MergeSort();
         //ob.sort(arr, 0, arr.length-1);
@@ -123,7 +122,7 @@ class MergeSort
         }
 
         System.out.println("\nSorted array by descending");
-        //printArray(arr);
+        printArray(arr);
 
         return total;
     }

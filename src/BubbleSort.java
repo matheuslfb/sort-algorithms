@@ -1,10 +1,8 @@
-package com.company;
-
 import java.util.Random;
 
-class BubbleSort
+public class BubbleSort
 {
-    void bubbleSort(int arr[])
+    public void bubbleSort(int arr[])
     {
         int n = arr.length;
         for (int i = 0; i < n-1; i++)
@@ -19,7 +17,7 @@ class BubbleSort
     }
 
     /* Prints the array */
-    void printArray(int arr[])
+    public void printArray(int arr[])
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
@@ -35,7 +33,7 @@ class BubbleSort
 
         Random n = new Random();
 
-        int arr[] =  new int[1000000];
+        int arr[] =  new int[100000];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = n.nextInt(1000);
         }
