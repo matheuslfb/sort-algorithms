@@ -86,33 +86,35 @@ class MergeSort
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
-            System.out.print(arr[i] + " ");
+            System.out.print("["+arr[i] + "] ");
         System.out.println();
     }
 
     // Driver method
     public static void main(String args[])
     {
-        int start = (int) System.currentTimeMillis();
+        double start =  System.currentTimeMillis();
+
         Random n = new Random();
-        int arr[] =  new int[200];
+        int arr[] =  new int[9990000];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = n.nextInt(1000);
         }
 
         System.out.println("Given Array");
-        printArray(arr);
+        //printArray(arr);
 
         MergeSort ob = new MergeSort();
         ob.sort(arr, 0, arr.length-1);
 
         System.out.println("\nSorted array by descending");
-        printArray(arr);        
+        
+        //printArray(arr);        
 
-        int end  =  (int) System.currentTimeMillis();
+        double end  =  System.currentTimeMillis();
 
-        int atual = end - start;
-        System.out.println("Tempo em segundos: "+ atual);
+        double atual = end - start;
+        System.out.println("Tempo em segundos: "+ atual/1000);
     }
 
     static int calcula(int arr[], int quantidade){
