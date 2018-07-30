@@ -1,7 +1,7 @@
 // Fibonacci Series using Dynamic Programming
 class fibonacci_dynamic_programming
 {
-   static int fib(int n)
+   static double fib(int n)
     {
     /* Declare an array to store Fibonacci numbers. */
     int f[] = new int[n+2]; // 1 extra to handle case, n = 0
@@ -23,8 +23,15 @@ class fibonacci_dynamic_programming
       
     public static void main (String args[])
     {
-        int n = 25;
+        double start =  System.currentTimeMillis();
+        int n = 161;
+        System.out.println("Fib de "+n);
         System.out.println(fib(n));
+
+        double end  =  System.currentTimeMillis();
+
+        double atual = end - start;
+        System.out.println("Tempo em segundos: "+ atual/1000);
     }
 }
 /* This code is contributed by Rajat Mishra */

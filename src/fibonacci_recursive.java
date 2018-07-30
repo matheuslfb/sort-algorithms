@@ -1,7 +1,7 @@
 //Fibonacci Series using Recursion
 class fibonacci_recursive
 {
-    static int fib(int n)
+    static double fib(int n)
     {
     if (n <= 1)
        return n;
@@ -10,7 +10,8 @@ class fibonacci_recursive
       
     public static void main (String args[]){
         double start =  System.currentTimeMillis();
-        int n = 25;
+        int n = 45;
+        System.out.println("Fib de "+n);
         System.out.println(fib(n));
 
         double end  =  System.currentTimeMillis();
